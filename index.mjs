@@ -27,7 +27,7 @@ export const handler = async (event) => {
     // Email content
     const msg = {
       to: email,
-      from: 'no-reply@demo.vardhan.click', // Verified domain sender email
+      from: `no-reply@${process.env.DOMAIN}`, // Verified domain sender email
       subject: 'Verify Your Email',
       text: `Please verify your email by clicking the following link. The link will expire in 1 minute.\n\n${verificationLink}`,
     };
